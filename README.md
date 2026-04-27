@@ -1,113 +1,158 @@
-# Estimacion_Agricolas
-Este repositorio contiene un proyecto completo de Business Intelligence y Ciencia de Datos que analiza las estimaciones agrícolas en Argentina.
+# 📊 Análisis Integral y Predictivo de Estimaciones Agrícolas en Argentina
 
-# Análisis Integral y Predictivo de Estimaciones Agrícolas en Argentina
-
-Este repositorio contiene un proyecto completo de Business Intelligence y Ciencia de Datos que analiza las estimaciones agrícolas en Argentina. La solución transforma datos públicos en un dashboard interactivo y un modelo predictivo, proporcionando insights históricos, diagnósticos y pronósticos para la toma de decisiones estratégicas en el sector agrícola.
+Proyecto de Business Intelligence y Ciencia de Datos orientado al análisis, diagnóstico y predicción del rendimiento agrícola en Argentina, integrando ETL, Machine Learning y visualización avanzada en Power BI.
 
 ---
 
-## 📋 Tabla de Contenidos
-- [Descripción del Proyecto](#-descripción-del-proyecto)
-- [✨ Características Principales](#-características-principales)
-- [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
-- [⚙️ Metodología y Flujo de Trabajo](#️-metodología-y-flujo-de-trabajo)
-- [📂 Estructura del Repositorio](#-estructura-del-repositorio)
-- [🚀 Cómo Empezar](#-cómo-empezar)
-- [📊 Resultados e Insights Clave](#-resultados-e-insights-clave)
-- [✒️ Autor](#️-autor)
-- [📄 Licencia](#-licencia)
+## 📄 Documentación Ejecutiva
+
+Este proyecto incluye documentación profesional orientada a la toma de decisiones, con una síntesis clara del análisis y sus resultados principales.
+
+🔍 Incluye:
+
+* 📘 Resumen ejecutivo del proyecto
+* 📊 Presentación del dashboard en formato profesional
+* 📈 Principales insights y resultados predictivos
+
+📥 Acceso directo:
+
+* 👉 [Resumen Ejecutivo](./docs/Resumen_Ejecutivo_Estimaciones_Agricolas.pdf)
+* 👉 [Dashboard Ejecutivo](./docs/Dashboard_Ejecutivo_Estimaciones_Agricolas.pdf)
 
 ---
 
-## 📝 Descripción del Proyecto
+## 📖 Descripción del Proyecto
 
-El objetivo de este proyecto es construir una solución analítica de extremo a extremo (end-to-end) utilizando datos del Ministerio de Agricultura, Ganadería y Pesca de Argentina. El proceso abarca desde la limpieza y transformación de los datos (ETL) hasta la creación de un modelo de Machine Learning para predecir el rendimiento de los cultivos, con todos los resultados integrados en un reporte dinámico y de alto impacto en Power BI.
+Este repositorio presenta una solución analítica end-to-end basada en datos públicos del Ministerio de Agricultura, Ganadería y Pesca de Argentina.
 
-**Fuente de Datos:** [Dataset de Estimaciones Agrícolas - datos.magyp.gob.ar](https://datos.magyp.gob.ar/dataset/estimaciones-agricolas)
+El proyecto abarca:
+
+* 🔄 Procesamiento de datos (ETL)
+* 📊 Análisis descriptivo y diagnóstico
+* 🤖 Modelado predictivo (Machine Learning)
+* 📈 Visualización interactiva en Power BI
+
+El objetivo es transformar datos agrícolas en información estratégica para la toma de decisiones.
 
 ---
 
 ## ✨ Características Principales
 
-- **Pipeline de Datos Completo:** Implementación de un proceso ETL robusto en Python para limpiar, transformar y preparar los datos para el análisis.
-- **Modelado Dimensional (Esquema Estrella):** Diseño e implementación de un modelo de datos optimizado para el rendimiento y la claridad en Power BI, con una tabla de hechos central y múltiples dimensiones (Tiempo, Cultivo, Geografía).
-- **Dashboard Interactivo:** Un reporte completo en Power BI con análisis descriptivos y diagnósticos, incluyendo:
-    - KPIs de rendimiento y producción.
-    - Análisis geográfico detallado por provincia y departamento.
-    - Tendencias temporales y comparativas interanuales gracias a una dimensión de tiempo dedicada.
-- **Análisis Predictivo con Machine Learning:**
-    - Desarrollo de un modelo (ej. XGBoost Regressor) para predecir el **rendimiento futuro (tn/ha)** de los cultivos.
-    - Integración de los resultados del modelo directamente en el dashboard para un análisis prescriptivo.
+* **Pipeline de datos completo:**
+  Procesamiento ETL en Python para limpieza, transformación y estructuración.
+
+* **Modelado dimensional (Esquema Estrella):**
+  Diseño optimizado para análisis en Power BI.
+
+* **Dashboard interactivo:**
+
+  * KPIs de producción y rendimiento
+  * Análisis geográfico (provincia/departamento)
+  * Tendencias temporales
+
+* **Análisis predictivo:**
+
+  * Modelo de Machine Learning (ej. XGBoost Regressor)
+  * Predicción de rendimiento (tn/ha)
+  * Integración de resultados en Power BI
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Lenguaje de Programación:** Python 3.x
-- **Librerías de Python:**
-    - Pandas: Para manipulación y limpieza de datos.
-    - Scikit-learn: Para el entrenamiento y evaluación del modelo de Machine Learning.
-    - Jupyter Notebook: Para el desarrollo iterativo y la documentación del proceso.
-- **Business Intelligence:**
-    - Microsoft Power BI: Para el modelado de datos, creación de medidas DAX y visualización interactiva.
-    - DAX (Data Analysis Expressions): Para la creación de métricas de inteligencia de tiempo y KPIs complejos.
-- **Control de Versiones:** Git y GitHub.
+* **Python 3.x**
+
+  * Pandas
+  * Scikit-learn
+  * Jupyter Notebook
+
+* **Business Intelligence**
+
+  * Power BI
+  * DAX
+
+* **Control de versiones**
+
+  * Git & GitHub
 
 ---
 
 ## ⚙️ Metodología y Flujo de Trabajo
 
-El proyecto sigue un flujo de trabajo estructurado en cuatro fases principales:
+### 🔹 Fase 1: Procesamiento de Datos (Python)
 
-1.  **Fase 1: Procesamiento y Modelado de Datos (Python)**
-    - **Ingesta y Limpieza:** Carga del dataset original, manejo de valores nulos, corrección de tipos de datos y estandarización de texto.
-    - **Análisis Exploratorio de Datos (EDA):** Entendimiento de la distribución de los datos e identificación de patrones iniciales.
-    - **Creación del Modelo Estrella:** Descomposición del dataset en una tabla de hechos (`fact_agricola`) y tablas de dimensiones (`dim_cultivo`, `dim_provincia`, `dim_departamento`, `dim_tiempo`), exportadas como archivos CSV limpios.
+* Limpieza y transformación
+* Análisis exploratorio (EDA)
+* Construcción de modelo estrella
+* Exportación a CSV
 
-2.  **Fase 2: Análisis Descriptivo y Diagnóstico (Power BI)**
-    - Carga de los archivos CSV en Power BI.
-    - Construcción de las relaciones para formar el esquema estrella.
-    - Desarrollo de medidas DAX, incluyendo cálculos de inteligencia de tiempo como `SAMEPERIODLASTYEAR`.
-    - Creación de las páginas del reporte para el análisis interactivo.
+### 🔹 Fase 2: Análisis en Power BI
 
-3.  **Fase 3: Análisis Predictivo (Python - Machine Learning)**
-    - Preparación de los datos para el modelo (feature engineering).
-    - Entrenamiento de un modelo de regresión para predecir la variable `rendimiento`.
-    - Evaluación del modelo utilizando métricas como el Error Cuadrático Medio (RMSE).
-    - Generación de un archivo CSV con las predicciones para el próximo ciclo agrícola.
+* Modelado de datos
+* Creación de medidas DAX
+* Desarrollo de dashboard interactivo
 
-4.  **Fase 4: Integración y Análisis Prescriptivo (Power BI)**
-    - Carga del archivo de predicciones en el modelo de Power BI.
-    - Creación de una página dedicada a "Pronósticos y Recomendaciones" que visualiza el rendimiento futuro, mapas de calor predictivos y rankings de cultivos recomendados.
+### 🔹 Fase 3: Machine Learning
+
+* Feature engineering
+* Entrenamiento del modelo
+* Evaluación (RMSE)
+* Generación de predicciones
+
+### 🔹 Fase 4: Integración
+
+* Incorporación de predicciones en Power BI
+* Visualización de escenarios futuros
+* Análisis prescriptivo
 
 ---
 
 ## 📊 Resultados e Insights Clave
 
-- El análisis geográfico reveló que más del 75% de la producción de soja se concentra en las provincias de Buenos Aires, Córdoba y Santa Fe.
-- La implementación de medidas de inteligencia de tiempo permitió identificar un crecimiento sostenido en el rendimiento del maíz del 5% interanual en los últimos 3 años.
-- El modelo predictivo estima un rendimiento promedio de **[inserta un resultado de tu modelo, ej: 8.5 tn/ha]** para el maíz en el próximo ciclo en la región núcleo, sugiriendo un panorama favorable.
+* Alta concentración productiva:
+  Más del 75% de la producción de soja se concentra en Buenos Aires, Córdoba y Santa Fe.
+
+* Tendencias positivas:
+  Crecimiento sostenido del rendimiento del maíz (~5% interanual).
+
+* Predicción favorable:
+  El modelo estima un rendimiento promedio de **[ajusta aquí tu resultado real]** para el próximo ciclo agrícola.
 
 ---
 
-## ✒️ Autor
+## 📂 Estructura del Repositorio
 
-Proyecto desarrollado y ejecutado por:
+* `/data` → Datos fuente
+* `/notebooks` → Análisis y modelado en Python
+* `/report` → Reportes y documentación técnica
+* `/visuals` → Imágenes del dashboard
+* `/docs` → Documentación ejecutiva (PDFs)
+* `.pbix` → Archivo Power BI
 
-**Ing. Victor H. Villegas Rios**
-*Consultor Freelance especializado en Análisis y Ciencia de Datos*
+---
 
-Un profesional apasionado por transformar datos complejos en soluciones estratégicas y visualizaciones de alto impacto.
+## 🧑‍💻 Autor
 
-**Expertise:**
-- Business Intelligence (Power BI)
-- Analisis y Ciencia de Datos (Machine Learning)
-- Pipeline de Datos (ETL)
-- Modelado Dimensional
+**Ing. Víctor Hugo Villegas Ríos**
+Consultor Freelance en Análisis y Ciencia de Datos
 
-**Contacto:**
-- **LinkedIn:** [Victor H. Villegas Rios](https://www.linkedin.com/in/victorhugovillegasrios/)
-- **GitHub:** [@tu-usuario-de-github](https://github.com/VictorHugoVillegasRios)  <!-- Reemplaza esto con tu usuario de GitHub -->
+Especialización en:
+
+* 📊 Business Intelligence (Power BI)
+* 🤖 Machine Learning
+* 🔄 Procesos ETL
+* 📈 Modelado de datos
+
+🔗 LinkedIn:
+https://www.linkedin.com/in/victorhugovillegasrios/
+
+🔗 GitHub:
+https://github.com/VictorHugoVillegasRios/
+
+---
+
+## 🎯 Enfoque del Proyecto
+
+Este proyecto fue desarrollado como un caso de estudio profesional para demostrar la aplicación de herramientas de análisis de datos y ciencia de datos en el sector agrícola, integrando analítica descriptiva, predictiva y visualización estratégica.
 
 ---
